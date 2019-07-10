@@ -51,11 +51,17 @@ public class SimulationPage extends BasePage implements Simulation {
 
 	public void inputTime(String time) {
 		log.getTest().log(Status.INFO, "typing time to invest");
-		write(By.id("valorInvestir"), time);
+		write(By.id("tempo"), time);
 	}
 
 	public void selectTimeType(String timeType) {
-
+		click(By.id("periodo"));
+		click(By.xpath("//a[contains(text(),'Meses')]"));
+	}
+	
+	public void selectTimeType222() {
+		click(By.xpath("//span[@class='seta']"));
+		click(By.xpath("//a[contains(text(),'Anos')]"));
 	}
 
 	public void clickSimuteButton() {
