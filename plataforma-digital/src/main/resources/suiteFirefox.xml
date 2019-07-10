@@ -9,7 +9,7 @@
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class name="test.SimulationTest" />
-			<class name="test.SimulationResultTest" />
+			<!-- <class name="test.SimulationResultTest" /> -->
 		</classes>
 	</test>
 </suite>
