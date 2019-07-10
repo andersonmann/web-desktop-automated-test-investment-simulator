@@ -66,7 +66,7 @@ public class SimulationPage extends BasePage implements Simulation {
 
 	public void clickSimuteButton() {
 		log.getTest().log(Status.INFO, "clicking at the button SIMULAR");
-		click(By.className("btn btnAmarelo btnSimular"));
+		click(By.xpath("//button[@class='btn btnAmarelo btnSimular']"));
 	}
 
 	public void clickCleanFormkButton() {
