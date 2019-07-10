@@ -37,7 +37,7 @@ public class SimulationTest extends BaseTest {
 		simulation.write(By.id("valorInvestir"), "99999");
 		simulation.write(By.id("tempo"), "10");
 		simulation.selectTimeType222();
-		
+		simulation.clickSimuteButton();
 		esperar(3000);
 	}
 
