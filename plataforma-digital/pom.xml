@@ -15,7 +15,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>src/main/resources/suiteFirefox.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/suiteChrome.xml</suiteXmlFile>
+						<suiteXmlFile>src/main/resources/suiteChrome.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
