@@ -98,4 +98,9 @@ public class SimulationPage extends BasePage implements Simulation {
 		clickCleanFormkButton();
 	}
 
+	public void validateMandatoryFields() {
+		scrollToDown();
+		clickSimuteButton();
+	}
+
 }
