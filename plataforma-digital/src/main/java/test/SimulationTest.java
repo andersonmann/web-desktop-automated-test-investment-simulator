@@ -23,7 +23,7 @@ public class SimulationTest extends BaseTest {
 //	}
 
 //	@Test(dataProvider = "user-passwd-ok", priority = 0)
-	
+
 //	@Test(priority = 0)
 //	public void validSimulation() {//String profile, String initialValue, String monthlyValue, String time,String timeType
 //		simulation.simulateInvestiment("pessoa juridica", "50000", "20000", "12", "meses");
@@ -36,7 +36,7 @@ public class SimulationTest extends BaseTest {
 		simulation.write(By.id("valorAplicar"), "2222");
 		simulation.write(By.id("valorInvestir"), "99999");
 		simulation.write(By.id("tempo"), "10");
-		simulation.selectTimeType222();
+		simulation.selectTimeType("Meses");
 		simulation.clickSimuteButton();
 		esperar(3000);
 	}
