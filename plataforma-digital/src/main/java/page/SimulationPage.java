@@ -77,6 +77,7 @@ public class SimulationPage extends BasePage implements Simulation {
 
 	public void flowSimulateInvestment(String profile, String initialValue, String monthlyValue, String time,
 			String timeType) {
+		scrollTo();
 		switchTo(0);
 		selectProfile(profile);
 		inputInitialValue(initialValue);
