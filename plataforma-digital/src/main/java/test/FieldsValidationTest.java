@@ -35,5 +35,4 @@ public class FieldsValidationTest extends BaseTest {
 		simulation.validateMandatoryFields();
 		assertEquals("Obrigatório", simulation.getValue(By.id("tempo-error")));
 	}
-
 }
