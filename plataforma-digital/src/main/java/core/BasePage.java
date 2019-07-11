@@ -7,14 +7,11 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.aventstack.extentreports.Status;
 
 import util.ExtentTestManager;
 
@@ -156,9 +153,9 @@ public class BasePage extends BrowserFactory {
 			throw new NoSuchElementException("Element not found: " + e.getMessage());
 		}
 	}
-	
+
 	public void scrollToDown() {
-		 ((JavascriptExecutor)driver).executeScript("scroll(0,400)");
+		((JavascriptExecutor) driver).executeScript("scroll(0,400)");
 	}
 
 }
