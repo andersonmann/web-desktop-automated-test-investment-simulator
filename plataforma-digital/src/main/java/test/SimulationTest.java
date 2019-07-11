@@ -3,6 +3,8 @@
  */
 package test;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,66 +18,69 @@ import page.SimulationPage;
  */
 public class SimulationTest extends BaseTest {
 	private SimulationPage simulation = new SimulationPage();
+	private static final String profile1 = "pessoa fisica";
+	private static final String profile2 = "pessoa juridica";
 
-//	@DataProvider(name = "user-passwd-ok")
-//	public static Object[][] login0() {
-//		return new Object[][] { { user, psswd } };
+	@DataProvider(name = "profile1-months")
+	public static Object[][] pf1() {
+		return new Object[][] { { profile1, "500000", "10000", "36", "meses" } };
+	}
+
+	@DataProvider(name = "profile1-years")
+	public static Object[][] pf2() {
+		return new Object[][] { { profile1, "500000", "10000", "2", "anos" } };
+	}
+
+	@DataProvider(name = "profile2-months")
+	public static Object[][] pj1() {
+		return new Object[][] { { profile2, "500000", "10000", "36", "meses" } };
+	}
+
+	@DataProvider(name = "profile2-years")
+	public static Object[][] pj2() {
+		return new Object[][] { { profile2, "500000", "10000", "2", "anos" } };
+	}
+
+	@Test(dataProvider = "profile1-months", priority = 0)
+	public void validSimulationProfile1Months(String profile, String initialValue, String monthlyValue, String time,
+			String timeType) {
+		simulation.simulateInvestiment(profile, initialValue, monthlyValue, time, timeType);
+		assertTrue(simulation.existElement(By.xpath("//a[@class='btn btnAmarelo btnRefazer']")));
+	}
+
+	@Test(dataProvider = "profile1-years", priority = 1)
+	public void validSimulationProfile1Years(String profile, String initialValue, String monthlyValue, String time,
+			String timeType) {
+		simulation.simulateInvestiment(profile, initialValue, monthlyValue, time, timeType);
+		assertTrue(simulation.existElement(By.xpath("//a[@class='btn btnAmarelo btnRefazer']")));
+	}
+
+	@Test(dataProvider = "profile2-months", priority = 2)
+	public void validSimulationProfile2Months(String profile, String initialValue, String monthlyValue, String time,
+			String timeType) {
+		simulation.simulateInvestiment(profile, initialValue, monthlyValue, time, timeType);
+		assertTrue(simulation.existElement(By.xpath("//a[@class='btn btnAmarelo btnRefazer']")));
+	}
+
+	@Test(dataProvider = "profile2-years", priority = 3)
+	public void validSimulationProfile2Years(String profile, String initialValue, String monthlyValue, String time,
+			String timeType) {
+		simulation.simulateInvestiment(profile, initialValue, monthlyValue, time, timeType);
+		assertTrue(simulation.existElement(By.xpath("//a[@class='btn btnAmarelo btnRefazer']")));
+	}
+
+//	@Test
+//	public void test() {
+//		esperar(2000);
+//		simulation.scrollToDown();
+//		simulation.switchTo(0);
+//		simulation.selectProfile("pessoa juridica");
+//		simulation.write(By.id("valorAplicar"), "2222");
+//		simulation.write(By.id("valorInvestir"), "99999");
+//		simulation.write(By.id("tempo"), "10");
+//		simulation.selectTimeType("Meses");
+//		simulation.clickSimuteButton();
+//		esperar(3000);
 //	}
-
-//	@Test(dataProvider = "user-passwd-ok", priority = 0)
-
-//	@Test(priority = 0)
-//	public void validSimulation() {//String profile, String initialValue, String monthlyValue, String time,String timeType
-//		simulation.simulateInvestiment("pessoa juridica", "50000", "20000", "12", "meses");
-//	}
-
-	@Test
-	public void validateFieldValueToApplyEmpity() {
-
-	}
-
-	@Test
-	public void validateFieldValueToApplySmall() {
-
-	}
-
-	@Test
-	public void validateFieldValueToInvestEmpity() {
-
-	}
-
-	@Test
-	public void validateFieldValueToInvestSmall() {
-
-	}
-
-	@Test
-	public void validateFieldTimeToInvestEmpity() {
-
-	}
-
-	@Test
-	public void validateFieldTimeToInvestZero() {
-
-	}
-
-	@Test
-	public void validateFieldTimeToInvestInvalid() {
-
-	}
-
-	@Test
-	public void test() {
-		esperar(2000);
-		simulation.scrollToDown();
-		simulation.switchTo(0);
-		simulation.selectProfile("pessoa juridica");
-		simulation.write(By.id("valorAplicar"), "2222");
-		simulation.write(By.id("valorInvestir"), "99999");
-		simulation.write(By.id("tempo"), "10");
-		simulation.selectTimeType("Meses");
-		simulation.clickSimuteButton();
-		esperar(3000);
-	}
 
 }
