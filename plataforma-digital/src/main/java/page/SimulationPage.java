@@ -65,11 +65,6 @@ public class SimulationPage extends BasePage implements Simulation {
 		}
 	}
 
-	public void selectTimeType222() {
-		click(By.xpath("//span[@class='seta']"));
-		click(By.xpath("//a[contains(text(),'Anos')]"));
-	}
-
 	public void clickSimuteButton() {
 		log.getTest().log(Status.INFO, "clicking at the button SIMULAR");
 		click(By.xpath("//button[@class='btn btnAmarelo btnSimular']"));
