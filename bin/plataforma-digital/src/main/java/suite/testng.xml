@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression test">
-	<suite-files>
-		<suite-file path="src/main/resources/suiteFirefox.xml" />
-		<suite-file path="src/main/resources/suiteChrome.xml" />
-	</suite-files>
-</suite>
-
