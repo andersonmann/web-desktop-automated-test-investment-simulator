@@ -13,6 +13,9 @@ public class SimulationResultPage {
 
 	@Test
 	public void validateQuantidadeTempo() {
-
+	}
+	
+	@Test
+	public void validateQuantidadeTempo2() {
 	}
 }
