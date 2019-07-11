@@ -68,6 +68,7 @@ public class SimulationTest extends BaseTest {
 		simulation.simulateInvestiment(profile, initialValue, monthlyValue, time, timeType);
 		assertTrue(simulation.existElement(By.xpath("//a[@class='btn btnAmarelo btnRefazer']")));
 	}
+	
 
 //	@Test
 //	public void test() {
