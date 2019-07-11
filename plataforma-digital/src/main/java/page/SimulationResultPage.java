@@ -15,5 +15,4 @@ public class SimulationResultPage {
 	public void validateQuantidadeTempo() {
 
 	}
-
 }
