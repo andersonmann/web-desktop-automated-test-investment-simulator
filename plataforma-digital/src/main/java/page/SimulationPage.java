@@ -3,6 +3,7 @@
  */
 package page;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -102,5 +103,4 @@ public class SimulationPage extends BasePage implements Simulation {
 		scrollToDown();
 		clickSimuteButton();
 	}
-
 }
