@@ -157,7 +157,7 @@ public class BasePage extends BrowserFactory {
 		}
 	}
 	
-	public void scrollTo() {
+	public void scrollToDown() {
 		 ((JavascriptExecutor)driver).executeScript("scroll(0,400)");
 	}
 

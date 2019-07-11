@@ -31,6 +31,8 @@ public class SimulationTest extends BaseTest {
 
 	@Test
 	public void test() {
+		esperar(2000);
+		simulation.scrollToDown();
 		simulation.switchTo(0);
 		simulation.selectProfile("pessoa juridica");
 		simulation.write(By.id("valorAplicar"), "2222");
