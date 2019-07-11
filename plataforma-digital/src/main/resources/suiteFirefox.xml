@@ -5,11 +5,9 @@
 		<listener class-name="util.TestListener" />
 	</listeners>
 
-	<test name="Tests using browser FIREFOX">
+	<test name="Regression tests using firefox browser">
 		<parameter name="browser" value="firefox" />
 		<classes>
-
-			<!-- -->
 			<class name="test.FieldsValidationTest" />
 			<class name="test.SimulationTest" />
 			<class name="test.SimulationResultTest" />

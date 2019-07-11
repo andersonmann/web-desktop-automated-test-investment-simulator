@@ -5,9 +5,10 @@
 		<listener class-name="util.TestListener" />
 	</listeners>
 
-	<test name="Tests using browser CHROME ">
+	<test name="Regression tests using chrome browser">
 		<parameter name="browser" value="chrome" />
 		<classes>
+			<class name="test.FieldsValidationTest" />
 			<class name="test.SimulationTest" />
 			<class name="test.SimulationResultTest" />
 		</classes>
