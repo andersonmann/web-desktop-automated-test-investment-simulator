@@ -30,6 +30,41 @@ public class SimulationTest extends BaseTest {
 //	}
 
 	@Test
+	public void validateFieldValueToApplyEmpity() {
+
+	}
+
+	@Test
+	public void validateFieldValueToApplySmall() {
+
+	}
+
+	@Test
+	public void validateFieldValueToInvestEmpity() {
+
+	}
+
+	@Test
+	public void validateFieldValueToInvestSmall() {
+
+	}
+
+	@Test
+	public void validateFieldTimeToInvestEmpity() {
+
+	}
+
+	@Test
+	public void validateFieldTimeToInvestZero() {
+
+	}
+
+	@Test
+	public void validateFieldTimeToInvestInvalid() {
+
+	}
+
+	@Test
 	public void test() {
 		esperar(2000);
 		simulation.scrollToDown();
