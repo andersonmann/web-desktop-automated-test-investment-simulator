@@ -13,6 +13,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.Status;
+
 import util.ExtentTestManager;
 
 /**
@@ -30,9 +32,6 @@ public class BasePage extends BrowserFactory {
 	 */
 	private void waitForElement(By by) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-//		wait.until(ExpectedConditions.presenceOfElementLocated(by));
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 
@@ -155,7 +154,7 @@ public class BasePage extends BrowserFactory {
 	}
 
 	public void scrollToDown() {
+		log.getTest().log(Status.INFO, "scroll down the page");
 		((JavascriptExecutor) driver).executeScript("scroll(0,400)");
 	}
-
 }
