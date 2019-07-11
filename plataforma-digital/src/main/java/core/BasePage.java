@@ -88,6 +88,7 @@ public class BasePage extends BrowserFactory {
 	public String getValue(By by) throws NoSuchElementException {
 		try {
 			waitForElement(by);
+			log.getTest().log(Status.INFO, "geting text of the locator: " + by);
 			return driver.findElement(by).getText();
 		} catch (Exception e) {
 			throw new NoSuchElementException("Element not found: " + e.getMessage());
@@ -147,6 +148,7 @@ public class BasePage extends BrowserFactory {
 		try {
 			waitForElement(by);
 			List<WebElement> elementos = driver.findElements(by);
+			log.getTest().log(Status.INFO, "validating existence of the text: " + by);
 			return elementos.size() > 0;
 		} catch (Exception e) {
 			throw new NoSuchElementException("Element not found: " + e.getMessage());
