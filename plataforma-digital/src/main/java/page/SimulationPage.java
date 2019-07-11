@@ -40,17 +40,17 @@ public class SimulationPage extends BasePage implements Simulation {
 	}
 
 	public void inputInitialValue(String value) {
-		log.getTest().log(Status.INFO, "typing value to apply");
+		log.getTest().log(Status.INFO, "typing value to apply: " + value);
 		write(By.id("valorAplicar"), value);
 	}
 
 	public void inputMonthlylValue(String value) {
-		log.getTest().log(Status.INFO, "typing value to invest");
+		log.getTest().log(Status.INFO, "typing value to invest: " + value);
 		write(By.id("valorInvestir"), value);
 	}
 
 	public void inputTime(String time) {
-		log.getTest().log(Status.INFO, "typing time to invest");
+		log.getTest().log(Status.INFO, "typing time to invest: " + time);
 		write(By.id("tempo"), time);
 	}
 
