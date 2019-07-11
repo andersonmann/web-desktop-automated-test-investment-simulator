@@ -55,10 +55,16 @@ public class SimulationPage extends BasePage implements Simulation {
 	}
 
 	public void selectTimeType(String timeType) {
-		click(By.id("periodo"));
-		click(By.xpath("//a[contains(text(),'Meses')]"));
+		click(By.xpath("//span[@class='seta']"));
+		if (timeType.equalsIgnoreCase("anos")) {
+			log.getTest().log(Status.INFO, "selecting the option 'Anos'");
+			click(By.xpath("//a[contains(text(),'Anos')]"));
+		} else {
+			log.getTest().log(Status.INFO, "selecting the option 'Meses'");
+			return;
+		}
 	}
-	
+
 	public void selectTimeType222() {
 		click(By.xpath("//span[@class='seta']"));
 		click(By.xpath("//a[contains(text(),'Anos')]"));
