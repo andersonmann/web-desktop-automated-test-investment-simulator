@@ -142,9 +142,3 @@ Was used [Sourcetree](https://www.sourcetreeapp.com//) for versioning.
 ## License
 
 This project is licensed under the GNU License.
-
-## Acknowledgments
-
-* With this tool you do not have to develop methods to perform various interactions with elements and web components, saving time to perform more productive tasks.
-
-
