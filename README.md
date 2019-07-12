@@ -56,6 +56,9 @@ verify that all dependencies of the project have been downloaded.
 To run the suite test, you should execute the file suite.xml, located at folder src/main/resources.
 You can also run by command line through maven commands.
 
+After the test execution, are create a execution report file, to evidence the result. 
+They are stored at folder called TestReport.
+
 
 ### Maven commands
 
