@@ -10,7 +10,7 @@ package core;
 
 public class BaseTest extends BrowserFactory {
 
-	public void esperar(long tempo) {
+	public void waiter(long tempo) {
 		try {
 			Thread.sleep(tempo);
 		} catch (InterruptedException e) {
