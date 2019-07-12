@@ -4,7 +4,6 @@
 package core;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -53,13 +52,6 @@ public class BasePage extends BrowserFactory {
 	}
 
 	/**
-	 * @param text
-	 */
-	public void clickByText(String text) {
-		click(By.xpath("//*[@text='" + text + "']"));
-	}
-
-	/**
 	 * Find an element and perform writing in the field
 	 * 
 	 * 
@@ -96,54 +88,30 @@ public class BasePage extends BrowserFactory {
 	}
 
 	/**
-	 * @param espara por N segundos
-	 */
-	public void stop(long tempo) {
-		try {
-			Thread.sleep(tempo);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * @return a URL do site
-	 */
-	public String currentURL() {
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		return driver.getCurrentUrl();
-	}
-
-	/**
-	 * @param id
-	 */
-	public void enterFrame(String id) {
-		driver.switchTo().frame(id);
-	}
-
-	/**
+	 * This method back to default frame
 	 * 
+	 * @param id frame
 	 */
 	public void exitFrame() {
 		driver.switchTo().defaultContent();
 	}
 
 	/**
+	 * This method change the frame
 	 * 
+	 * @param id frame
 	 */
 	public void switchTo(int value) {
 		driver.switchTo().window((String) driver.getWindowHandles().toArray()[value]);
 	}
 
-	public boolean isElementPresent(By locatorKey) {
-		try {
-			driver.findElement(locatorKey);
-			return true;
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			return false;
-		}
-	}
-
+	/**
+	 * Checks if a element exist at the page
+	 * 
+	 * @param By  Type of locator used for search (Ex: id, name, xpath,cssSelector)
+	 * @param the locator identifier
+	 * @throws NoSuchElementException
+	 */
 	public boolean existElement(By by) throws NoSuchElementException {
 		try {
 			waitForElement(by);
@@ -155,6 +123,9 @@ public class BasePage extends BrowserFactory {
 		}
 	}
 
+	/**
+	 * This method scroll down the page
+	 */
 	public void scrollToDown() {
 		log.getTest().log(Status.INFO, "scroll down the page");
 		((JavascriptExecutor) driver).executeScript("scroll(0,400)");
