@@ -110,6 +110,7 @@ public class BasePage extends BrowserFactory {
 	 * 
 	 * @param By  Type of locator used for search (Ex: id, name, xpath,cssSelector)
 	 * @param the locator identifier
+	 * @throws NoSuchElementException
 	 */
 	public boolean existElement(By by) throws NoSuchElementException {
 		try {
