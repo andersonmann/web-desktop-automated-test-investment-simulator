@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite" parallel="methods" thread-count="1"
+	configfailurepolicy="continue" verbose="1">
+
+	<listeners>
+		<listener class-name="util.TestListener" />
+	</listeners>
+
+	<test name="Regression tests using chrome browser">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="test.FieldsValidationTest" />
+			<class name="test.SimulationTest" />
+			<class name="test.SimulationResultTest" />
+		</classes>
+	</test>
+
+	<test name="Regression tests using firefox browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="test.FieldsValidationTest" />
+			<class name="test.SimulationTest" />
+			<class name="test.SimulationResultTest" />
+		</classes>
+	</test>
+</suite>
