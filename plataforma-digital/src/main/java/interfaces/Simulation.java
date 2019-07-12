@@ -43,5 +43,16 @@ public interface Simulation {
 	 * @param quantity of months or years
 	 */
 	void selectTimeType(String timeType);
+	
+	/**
+	 * This method runs the flow of simulation
+	 * @param profile
+	 * @param initialValue
+	 * @param monthlyValue
+	 * @param time
+	 * @param timeType
+	 */
+	void flowSimulateInvestment(String profile, String initialValue, String monthlyValue, String time,
+			String timeType);
 
 }
