@@ -73,19 +73,4 @@ public class SimulationTest extends BaseTest {
 		simulation.simulateInvestiment(profile, initialValue, monthlyValue, time, timeType);
 		assertTrue(simulation.existElement(By.xpath(ACTION_1)));
 	}
-
-//	@Test
-//	public void test() {
-//		esperar(2000);
-//		simulation.scrollToDown();
-//		simulation.switchTo(0);
-//		simulation.selectProfile("pessoa juridica");
-//		simulation.write(By.id("valorAplicar"), "2222");
-//		simulation.write(By.id("valorInvestir"), "99999");
-//		simulation.write(By.id("tempo"), "10");
-//		simulation.selectTimeType("Meses");
-//		simulation.clickSimuteButton();
-//		esperar(3000);
-//	}
-
 }
